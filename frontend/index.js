@@ -56,3 +56,7 @@ document.getElementById('clear').addEventListener('click', () => {
     operator = null;
     display.value = '';
 });
+
+document.getElementById('theme-switch').addEventListener('change', (event) => {
+    document.body.classList.toggle('dark-mode', event.target.checked);
+});

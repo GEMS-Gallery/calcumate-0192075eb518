@@ -1,11 +1,18 @@
 /* frontend/index.css */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 .calculator {
@@ -13,6 +20,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .calculator {
+    background-color: #1e1e1e;
 }
 
 #display {
@@ -24,6 +36,14 @@ body {
     font-size: 1.5em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #display {
+    background-color: #333;
+    color: #fff;
 }
 
 .keypad {
@@ -47,6 +67,15 @@ button:hover, button:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode button:hover, body.dark-mode button:focus {
+    background-color: #555;
+}
+
 .operator {
     background-color: #f9a825;
     color: white;
@@ -54,6 +83,14 @@ button:hover, button:focus {
 
 .operator:hover, .operator:focus {
     background-color: #f57f17;
+}
+
+body.dark-mode .operator {
+    background-color: #ffb300;
+}
+
+body.dark-mode .operator:hover, body.dark-mode .operator:focus {
+    background-color: #ffa000;
 }
 
 #clear {
@@ -65,6 +102,14 @@ button:hover, button:focus {
     background-color: #d32f2f;
 }
 
+body.dark-mode #clear {
+    background-color: #ef5350;
+}
+
+body.dark-mode #clear:hover, body.dark-mode #clear:focus {
+    background-color: #e53935;
+}
+
 #equals {
     background-color: #43a047;
     color: white;
@@ -72,4 +117,16 @@ button:hover, button:focus {
 
 #equals:hover, #equals:focus {
     background-color: #388e3c;
+}
+
+body.dark-mode #equals {
+    background-color: #66bb6a;
+}
+
+body.dark-mode #equals:hover, body.dark-mode #equals:focus {
+    background-color: #43a047;
+}
+
+.theme-toggle {
+    margin-bottom: 20px;
 }
