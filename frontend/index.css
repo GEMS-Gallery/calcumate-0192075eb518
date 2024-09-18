@@ -38,11 +38,13 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+button:hover, button:focus {
     background-color: #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .operator {
@@ -50,7 +52,7 @@ button:hover {
     color: white;
 }
 
-.operator:hover {
+.operator:hover, .operator:focus {
     background-color: #f57f17;
 }
 
@@ -59,7 +61,7 @@ button:hover {
     color: white;
 }
 
-#clear:hover {
+#clear:hover, #clear:focus {
     background-color: #d32f2f;
 }
 
@@ -68,6 +70,6 @@ button:hover {
     color: white;
 }
 
-#equals:hover {
+#equals:hover, #equals:focus {
     background-color: #388e3c;
 }
